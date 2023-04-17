@@ -1,10 +1,6 @@
 #!/usr/bin/node
-let i = 0;
-while (process.argv[i] !== undefined) {
-  i = i + 1;
-}
-if (i <= 2) {
-  console.log('No argument');
-} else {
+if (process.argv[2]) {
   console.log(process.argv[2]);
+} else if (process.argv[1]) {
+  console.log('No argument');
 }
